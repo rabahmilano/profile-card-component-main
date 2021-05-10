@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --Dark-cyan: hsl(185, 75%, 39%);
+  --Dark-desaturated-blue: hsl(229, 23%, 23%);
+  --Dark-grayish-blue: hsl(227, 10%, 46%);
+  --Dark-gray: hsl(0, 0%, 59%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--Dark-cyan);
+  background-image: url(../images/bg-pattern-top.svg),
+    url(../images/bg-pattern-bottom.svg);
+  background-position: top -30vh left -45vw, bottom -30vh right -40vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-size: 15px;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+@media (min-width: 900px) {
+  body {
+    background-image: url(../images/bg-pattern-top.svg),
+      url(../images/bg-pattern-bottom.svg);
+    background-position: top -50vh left -10vw, bottom -50vh right -10vw;
+    background-repeat: no-repeat;
+    background-size: contain, contain;
+  }
+}
+
+h2 {
+  color: var(--Dark-desaturated-blue);
+}
+p {
+  color: var(--Dark-gray);
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+#card {
+  border-radius: 20px;
+  width: 85%;
+  max-width: 340px;
+  display: grid;
+  grid-template-rows: 1fr 90px;
+}
+#top-container {
+  display: grid;
+  grid-template-rows: 140px 1fr;
+}
+.top-content {
+  background: url(../images/bg-pattern-card.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px 20px 0 0;
+}
+.bottom-content {
+  text-align: center;
+  background-color: white;
+}
+.bottom-content .profile-img {
+  position: relative;
+  top: -47px;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+.bottom-content .profile-info {
+  transform: translateY(-30px);
+}
+.bottom-content .profile-info h2 {
+  padding-bottom: 0.5rem;
+}
+h2 span {
+  color: var(--Dark-gray);
+}
+
+#bottom-container {
+  background-color: white;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+#bottom-container p {
+  line-height: 1.5em;
+}
+.attribution {
+  position: absolute;
+  bottom: 3rem;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
